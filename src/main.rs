@@ -3,8 +3,8 @@ use bevy::prelude::*;
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .add_startup_system(setup)
         .add_startup_system(init_field)
+        .add_startup_system(setup)
         .run();
 }
 
@@ -26,6 +26,7 @@ fn init_field(
         ..default()
       });
       x_off_set += 3.0;
+      y -= 1;
     }
     x_off_set = -1.0;
     y_off_set += 3.0;
